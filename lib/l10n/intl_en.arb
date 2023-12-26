@@ -1,0 +1,6 @@
+{
+    "networkReconnected": "Network Reconnected",
+    "networkDisconnected": "Network Disconnected",
+    "networkReconnectedDescription": "You are now connected to the internet.",
+    "networkDisconnectedDescription": "You are no longer connected to the internet."
+}

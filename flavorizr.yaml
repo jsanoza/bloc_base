@@ -1,0 +1,39 @@
+flavors:
+  dev:
+    app:
+      name: Movie Dev
+      description: Development environment
+
+    android:
+      applicationId: com.example.movie
+      # icon: "assets/images/launcher_icon.png"
+
+    ios:
+      bundleId: com.example.movie.dev
+      # icon: "assets/images/launcher_icon.png"
+
+  staging:
+    app:
+      name: Movie Staging
+      description: Staging environment
+
+    android:
+      applicationId: com.example.movie.staging
+      # icon: "assets/images/launcher_icon.png"
+
+    ios:
+      bundleId: com.example.movie.staging
+      # icon: "assets/images/launcher_icon.png"
+
+  prod:
+    app:
+      name: Movie
+      description: Production environment
+      
+    android:
+      applicationId: com.example.movie
+      # icon: "assets/images/launcher_icon.png"
+
+    ios:
+      bundleId: com.example.movie
+      # icon: "assets/images/launcher_icon.png"
