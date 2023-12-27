@@ -1,25 +1,38 @@
-part of 'image_upload_bloc.dart';
+import 'dart:io';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'image_upload_state.freezed.dart';
 
-class ImageUploadState extends Equatable {
-  final File? image;
-  final bool? hasLocalProfileImage;
+@freezed
+class ImageUploadState with _$ImageUploadState {
+  const factory ImageUploadState({
+    File? image,
+    bool? hasLocalProfileImage,
+  }) = _ImageUploadState;
 
-  const ImageUploadState({this.image, this.hasLocalProfileImage});
-
-  @override
-  List<Object?> get props => [image, hasLocalProfileImage];
-
-  ImageUploadState copyWith({
-    final File? image,
-    final bool? hasLocalProfileImage,
-  }) {
-    return ImageUploadState(
-      image: image ?? image,
-      hasLocalProfileImage: hasLocalProfileImage ?? hasLocalProfileImage,
-    );
-  }
-
-  factory ImageUploadState.initial() {
-    return const ImageUploadState(image: null, hasLocalProfileImage: false);
-  }
+  factory ImageUploadState.initial() =>
+      const ImageUploadState(image: null, hasLocalProfileImage: false);
 }
+
+
+// class NetworkState extends BlocState {
+//   final bool isConnected;
+
+//   const NetworkState({
+//     this.isConnected = false,
+//   });
+
+//   @override
+//   List<Object?> get props => [isConnected];
+
+//   NetworkState copyWith({
+//     final bool? isConnected,
+//   }) {
+//     return NetworkState(
+//       isConnected: isConnected ?? this.isConnected,
+//     );
+//   }
+
+//   factory NetworkState.initial() {
+//     return const NetworkState(isConnected: false);
+//   }
+// }

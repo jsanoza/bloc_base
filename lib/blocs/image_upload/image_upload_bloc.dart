@@ -4,16 +4,16 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/common/services/image_picker_service.dart';
 import '../../dependencies/dependency_manager.dart';
+import 'image_upload_state.dart';
 
-part 'image_upload_state.dart';
 part 'image_upload_event.dart';
 
 /// To open the image picker and store the file locally
 /// context.read<ImageUploadBloc>().add(const MediaPickEvent());
 /// context.read<ImagePickEvent>().add(const MediaPickEvent());
 /// if (state.hasLocalFile) { you can access state.file }
-/// 
-/// 
+///
+///
 class ImageUploadBloc extends Bloc<ImageUploadEvent, ImageUploadState> {
   final ImagePickerService _imagePickerService = sl<ImagePickerService>();
 
