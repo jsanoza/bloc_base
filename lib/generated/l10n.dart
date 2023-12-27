@@ -89,6 +89,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Register`
+  String get register {
+    return Intl.message(
+      'Register',
+      name: 'register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `On your way...`
+  String get onboardingPage1Title {
+    return Intl.message(
+      'On your way...',
+      name: 'onboardingPage1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `to find the perfect looking Onboarding for your app?`
+  String get onboardingPage1Description {
+    return Intl.message(
+      'to find the perfect looking Onboarding for your app?',
+      name: 'onboardingPage1Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You've reached your destination..`
+  String get onboardingPage2Title {
+    return Intl.message(
+      'You\'ve reached your destination..',
+      name: 'onboardingPage2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sliding with animation`
+  String get onboardingPage2Description {
+    return Intl.message(
+      'Sliding with animation',
+      name: 'onboardingPage2Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start now!`
+  String get onboardingPage3Title {
+    return Intl.message(
+      'Start now!',
+      name: 'onboardingPage3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Where everything is possible and customize your onboarding.`
+  String get onboardingPage3Description {
+    return Intl.message(
+      'Where everything is possible and customize your onboarding.',
+      name: 'onboardingPage3Description',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

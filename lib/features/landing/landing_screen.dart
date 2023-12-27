@@ -87,13 +87,13 @@ class _LandingScreenState extends State<LandingScreen> {
 
         /// if we need to show onboarding screen
         /// return onboarding screen
-        /// return const OnboardingScreen();
+        return const OnboardingScreen();
 
         /// for now lets show main screen and switching the routes to authenticated routes
 
-        return const AuthenticatedDependencyProvider(
-          child: MainScreen(),
-        );
+        // return const AuthenticatedDependencyProvider(
+        //   child: MainScreen(),
+        // );
       },
     );
   }

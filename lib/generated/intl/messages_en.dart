@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
         "networkDisconnected":
             MessageLookupByLibrary.simpleMessage("Network Disconnected"),
         "networkDisconnectedDescription": MessageLookupByLibrary.simpleMessage(
@@ -29,6 +30,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "networkReconnected":
             MessageLookupByLibrary.simpleMessage("Network Reconnected"),
         "networkReconnectedDescription": MessageLookupByLibrary.simpleMessage(
-            "You are now connected to the internet.")
+            "You are now connected to the internet."),
+        "onboardingPage1Description": MessageLookupByLibrary.simpleMessage(
+            "to find the perfect looking Onboarding for your app?"),
+        "onboardingPage1Title":
+            MessageLookupByLibrary.simpleMessage("On your way..."),
+        "onboardingPage2Description":
+            MessageLookupByLibrary.simpleMessage("Sliding with animation"),
+        "onboardingPage2Title": MessageLookupByLibrary.simpleMessage(
+            "You\'ve reached your destination.."),
+        "onboardingPage3Description": MessageLookupByLibrary.simpleMessage(
+            "Where everything is possible and customize your onboarding."),
+        "onboardingPage3Title":
+            MessageLookupByLibrary.simpleMessage("Start now!"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip")
       };
 }

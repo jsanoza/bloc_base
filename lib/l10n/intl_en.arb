@@ -2,5 +2,14 @@
     "networkReconnected": "Network Reconnected",
     "networkDisconnected": "Network Disconnected",
     "networkReconnectedDescription": "You are now connected to the internet.",
-    "networkDisconnectedDescription": "You are no longer connected to the internet."
+    "networkDisconnectedDescription": "You are no longer connected to the internet.",
+    "register": "Register",
+    "skip": "Skip",
+    "login": "Login",
+    "onboardingPage1Title": "On your way...",
+    "onboardingPage1Description": "to find the perfect looking Onboarding for your app?",
+    "onboardingPage2Title": "You've reached your destination..",
+    "onboardingPage2Description": "Sliding with animation",
+    "onboardingPage3Title": "Start now!",
+    "onboardingPage3Description": "Where everything is possible and customize your onboarding."
 }
