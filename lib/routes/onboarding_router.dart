@@ -1,5 +1,6 @@
 import 'dart:collection';
 import 'package:flutter/cupertino.dart';
+import 'package:movie/features/authentication/presentation/login_screen.dart';
 import '../features/welcomeScreen/welcome_screen.dart';
 import 'route_helper.dart';
 
@@ -14,10 +15,10 @@ class OnboardingRouter implements AppRouter {
 
   final LinkedHashMap<String, RouteBuilder> routes = LinkedHashMap.from(
     <String, RouteBuilder>{
-      // login: ({settings}) => _buildRoute(
-      //       const AuthenticationScreen(),
-      //       settings: settings,
-      //     ),
+      login: ({settings}) => _buildRoute(
+            const LoginScreen(),
+            settings: settings,
+          ),
       welcomeScreen: ({settings}) => _buildRoute(
             const WelcomeScreen(),
             settings: settings,
