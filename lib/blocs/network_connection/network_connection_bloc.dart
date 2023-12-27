@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/helpers/network_service.dart';
+import '../../dependencies/dependency_manager.dart';
 import 'network_connection_state.dart';
-
 part 'network_connection_event.dart';
 
 class NetworkBloc extends Bloc<NetworkEvent, NetworkState> {
@@ -16,7 +16,7 @@ class NetworkBloc extends Bloc<NetworkEvent, NetworkState> {
   factory NetworkBloc() => _instance;
 
   void _observe(event, emit) {
-    NetworkService.observeNetwork();
+    sl<NetworkService>().observeNetwork();
   }
 
   void _notifyStatus(NetworkNotify event, emit) {

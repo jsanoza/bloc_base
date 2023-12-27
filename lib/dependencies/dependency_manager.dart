@@ -20,6 +20,7 @@ import '../common/services/modal_service.dart';
 import '../common/services/permission_service.dart';
 import '../common/services/platform_service.dart';
 import '../common/services/toast_service.dart';
+import '../core/helpers/network_service.dart';
 import '../core/local_database/database_service.dart';
 import '../env/env.dart';
 import '../env/env_dev.dart';
@@ -68,6 +69,8 @@ class DependencyManager {
     provideDatabaseService();
 
     provideToastService();
+
+    provideNetworkService();
   }
 
   /// Ensures async dependencies are loaded before the initial screens are shown
@@ -203,5 +206,9 @@ class DependencyManager {
         logger: sl.get<Logger>(),
       ),
     );
+  }
+
+  void provideNetworkService() {
+    sl.registerLazySingleton<NetworkService>(() => NetworkService());
   }
 }

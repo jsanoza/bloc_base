@@ -17,10 +17,7 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
   void setOnBoardingSeenAndNavigate() async {
-    sl<SharedPreferences>().setBool(
-      PreferenceKeys.hasSeenOnBoarding,
-      true,
-    );
+    sl<SharedPreferences>().setBool(PreferenceKeys.hasSeenOnBoarding, true);
     sl<RouteHelper>().popAllAndPushToLoginScreen();
     return;
   }
@@ -28,6 +25,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
+      indicatorAbove: true,
       finishButtonText: S.current.register,
       centerBackground: true,
       onFinish: () {
@@ -37,7 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         backgroundColor: AppColors.kBlackColor,
       ),
       skipTextButton: Text(S.current.skip, style: context.textTheme.labelLarge),
-      trailing: Text(S.current.login, style: context.textTheme.labelLarge),
+      trailing: Text(S.current.register, style: context.textTheme.labelLarge),
       trailingFunction: () {
         setOnBoardingSeenAndNavigate();
       },
