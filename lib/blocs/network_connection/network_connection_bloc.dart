@@ -1,8 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/helpers/network_service.dart';
-import 'network_connection_event.dart';
 import 'network_connection_state.dart';
+
+part 'network_connection_event.dart';
 
 class NetworkBloc extends Bloc<NetworkEvent, NetworkState> {
   NetworkBloc._() : super(NetworkState.initial()) {

@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/blocs/app_bloc.dart';
 import 'package:movie/blocs/network_connection/network_connection_bloc.dart';
 import 'package:provider/provider.dart';
-
-import '../blocs/network_connection/network_connection_event.dart';
 import '../blocs/onboarding_bloc.dart';
 
 /// Provides context-based and disposable dependencies such as providers and

@@ -1,24 +1,12 @@
-import 'package:movie/core/bloc/state.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class NetworkState extends BlocState {
-  final bool isConnected;
+part 'network_connection_state.freezed.dart';
 
-  const NetworkState({
-    this.isConnected = false,
-  });
+@freezed
+class NetworkState with _$NetworkState {
+  const factory NetworkState({
+    @Default(false) bool isConnected,
+  }) = _NetworkState;
 
-  @override
-  List<Object?> get props => [isConnected];
-
-  NetworkState copyWith({
-    final bool? isConnected,
-  }) {
-    return NetworkState(
-      isConnected: isConnected ?? this.isConnected,
-    );
-  }
-
-  factory NetworkState.initial() {
-    return const NetworkState(isConnected: false);
-  }
+  factory NetworkState.initial() => const NetworkState();
 }

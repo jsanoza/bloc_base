@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/blocs/file_upload/file_upload_bloc.dart';
 import 'package:movie/blocs/image_upload/image_upload_bloc.dart';
-import 'package:movie/blocs/network_connection/network_connection_event.dart';
 
 import '../blocs/network_connection/network_connection_bloc.dart';
 
