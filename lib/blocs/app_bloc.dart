@@ -33,19 +33,19 @@ class AppBloc extends Cubit<AppState> {
       await onColdStart();
       emit(state.copyWith(initialized: true, showSplashScreen: false));
     } catch (e, stackTrace) {
-      Logger()
+      sl<Logger>()
           .e("DEPENDENCY ERROR WENT HERE", error: e, stackTrace: stackTrace);
       emit(state.copyWith(error: e, showSplashScreen: false));
     }
   }
 
   Future<void> verifyFreshInstall() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
+    final sharedPreferences = sl<SharedPreferences>();
+
     final isFreshInstall =
         sharedPreferences.getBool(PreferenceKeys.isFreshInstall) ?? true;
 
     if (isFreshInstall) {
-      // await FirebaseAuth.instance.signOut();
       await sharedPreferences.setBool(PreferenceKeys.isFreshInstall, false);
     }
   }
