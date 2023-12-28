@@ -15,6 +15,7 @@ import 'package:path_provider/path_provider.dart';
 // ignore: depend_on_referenced_packages
 import 'package:path/path.dart' as p;
 import '../common/services/busy_indicator_helper.dart';
+import '../common/services/device_info_service.dart';
 import '../common/services/image_picker_service.dart';
 import '../common/services/modal_service.dart';
 import '../common/services/permission_service.dart';
@@ -71,6 +72,7 @@ class DependencyManager {
     provideToastService();
 
     provideNetworkService();
+    provideDeviceInfoService();
   }
 
   /// Ensures async dependencies are loaded before the initial screens are shown
@@ -210,5 +212,9 @@ class DependencyManager {
 
   void provideNetworkService() {
     sl.registerLazySingleton<NetworkService>(() => NetworkService());
+  }
+
+  void provideDeviceInfoService() {
+    sl.registerLazySingleton<DeviceInfoService>(() => DeviceInfoService());
   }
 }

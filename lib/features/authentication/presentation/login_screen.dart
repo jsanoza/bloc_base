@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie/common/services/device_info_service.dart';
 
 import '../../../common/models/app_environment.dart';
 import '../../../dependencies/dependency_manager.dart';
@@ -12,6 +13,26 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  String _deviceId = "Loading...";
+
+  @override
+  void initState() {
+    super.initState();
+    _loadDeviceId();
+  }
+
+  Future<void> _loadDeviceId() async {
+    try {
+      _deviceId = await sl<DeviceInfoService>().getDeviceIdSync();
+    } catch (e) {
+      _deviceId = "Error: $e";
+    } finally {
+      if (mounted) {
+        setState(() {});
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(sl<AppEnvironment>().appName),
+          Text(_deviceId),
           const Text("Login Screen"),
         ],
       ),
